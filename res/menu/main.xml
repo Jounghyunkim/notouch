@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="johnny.studio.touchscreenlock.MainActivity" >
+
+    <item
+        android:id="@+id/app_info"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/app_info"/>
+    <item
+        android:id="@+id/how_to"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/how_to"/>
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/share"/>
+    <item
+        android:id="@+id/evaluation"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/evaluation"/>
+ <!--    <item
+        android:id="@+id/etc"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/etc"/> -->
+
+</menu>

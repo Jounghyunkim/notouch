@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="johnny.studio.notouch"
+    android:versionCode="13"
+    android:versionName="13" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="johnny.studio.notouch.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="johnny.studio.notouch.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="johnny.studio.notouch.LockedActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter>
+                <action android:name="android.intent.action.LockedActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="johnny.studio.notouch.unLockService" >
+            <intent-filter>
+                <action android:name="android.intent.action.unLockService.switch" />
+                <action android:name="android.intent.action.unLockService.finish" />
+                <action android:name="android.intent.action.unLockService.youtube" />
+                <action android:name="android.intent.action.unLockService.proximity_on" />
+                <action android:name="android.intent.action.unLockService.proximity_off" />
+                <action android:name="android.intent.action.unLockService.unlock_button_hide_on" />
+                <action android:name="android.intent.action.unLockService.unlock_button_hide_off" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="johnny.studio.notouch.LockService" >
+            <intent-filter>
+                <action android:name="android.intent.action.LockService.switch" />
+                <action android:name="android.intent.action.LockService.finish" />
+                <action android:name="android.intent.action.LockService.youtube" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="johnny.studio.notouch.NotouchBootingStartService" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <receiver
+            android:name="johnny.studio.notouch.MybroadcastReceiverService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="broadcastReceiverService"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

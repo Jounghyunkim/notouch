@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:scaleType="fitXY" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="#3399CC"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal" >
+            <ImageButton
+                android:id="@+id/btn_servicesSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginRight="10dp"
+                android:background="#00ff0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/changetounlock" />
+            
+            <ImageButton
+                android:id="@+id/btn_youtube"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginRight="15dp"
+                android:background="#00ff0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/youtube_btn" />
+
+            <ImageButton
+                android:id="@+id/btn_servicesFinish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="#00ff0000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/finish_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv.text1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    -->
+
+</LinearLayout>
